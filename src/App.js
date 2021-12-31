@@ -10,10 +10,9 @@ function App(props) {
   console.log(window.location);
   const parsed = queryString.parse(window.location.search);
 console.log(parsed);
-const {color} = parsed;
+// const {color} = parsed;
+const color = props.domElement.getAttribute("data-color");
 console.log(color);
-const subreddit = props.domElement.getAttribute("data-subreddit");
-console.log(subreddit);
   return (
     // <div className="App">
     //   <header className="App-header">

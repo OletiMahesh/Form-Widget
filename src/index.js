@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Find all widget divs
-const WidgetDivs = document.querySelectorAll('.reddit_widget')
+const WidgetDivs = document.querySelectorAll('.react_form_widget')
 
 // Inject our React App into each
 WidgetDivs.forEach(Div => {

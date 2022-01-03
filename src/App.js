@@ -1,18 +1,30 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import queryString from 'query-string';
+import { ThemeProvider } from "styled-components";
 
 import Form from './components/Form';
+import * as themes from './theme/schema.json';
+import img from './images/easyfinanciere.jpg'
 
 function App(props) {
   console.log(props);
   console.log(window.location);
   const parsed = queryString.parse(window.location.search);
-console.log(parsed);
-// const {color} = parsed;
-const color = props.domElement.getAttribute("data-color");
-console.log(color);
+  console.log(parsed);
+  const themeContent = props.domElement.getAttribute("data-theme");
+  console.log(themeContent);
+  console.log(themes);
+  const theme = themes.default.data[themeContent];
+  console.log(theme);
+
+  // useEffect(() => {
+  // fetch('https://jsonplaceholder.typicode.com/todos/1')
+  //   .then(response => response.json())
+  //   .then(json => console.log(json));
+  // },[])
+
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -31,7 +43,10 @@ console.log(color);
     //   </header>
     // </div>
     <div className="container mt-5">
-      <Form color={color} />
+      <ThemeProvider theme={ theme }>
+        <Form />
+        <img src={img} className="App-logo" alt="logo" />
+      </ThemeProvider>
     </div>
   );
 }

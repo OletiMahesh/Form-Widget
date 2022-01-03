@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import './index.css';
+import './index.scss';
 
 const Title = styled.h2`
-   color: ${props => props.color ? props.color : "#000"};
+   color: ${({ theme }) => theme.colors.text};
 `;
 
 const SubmitBtn = styled.button`
@@ -26,20 +26,27 @@ const SubmitBtn = styled.button`
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 `;
 
-const SignupBtn = styled.button`
+const SignupBtn = styled.button.attrs(props => ({
+    type: "button",
+  }))`
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
-    background-color: ${props => props.color ? props.color : "#212529"};
-    border-color: ${props => props.color ? props.color : "#212529"};
+    background-color: ${(props) => {
+      console.log(props)
+      console.log(props.theme.colors.button.background)
+      return props.theme.colors.button.background
+      }
+    };
+    border: ${({ theme }) => `1px solid ${theme.colors.button.background}`};
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: 0.25rem;
@@ -50,6 +57,17 @@ function Form(props) {
   console.log(props);
   const {color} = props;
   console.log(color);
+  // const signup = () => {
+  //   fetch('https://jsonplaceholder.typicode.com/todos/1')
+  //     .then(response => response.json())
+  //     .then(json => console.log(json));
+  // }
+
+  const handleSignup = () => {
+   fetch('http://dummy.restapiexample.com/api/v1/employees')
+      .then(response => response.json())
+      .then(json => console.log(json));
+  }
   return (
     <div className="container mt-5">
       <Title color={color}>Stay in the Know</Title>
@@ -60,8 +78,9 @@ function Form(props) {
           {/* <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div> */}
           {/* <span className="input-group-text">Sign Up</span> */}
 
-          {/* <button type="button" className="btn btn-dark" id="emailBtn">Sign Up</button> */}
-          <SignupBtn color={color} >Sign Up</SignupBtn>
+          {/* <button type="button" className="btn btn-dark" id="emailBtn" onClick={handleSignup}>Sign Up</button> */}
+          <SignupBtn color={color} onClick={handleSignup}>Sign Up</SignupBtn>
+
         </div>
         {/* <div className="mb-3">
           <label for="exampleInputPassword1" className="form-label">Password</label>
@@ -82,7 +101,7 @@ function Form(props) {
           </div>
         </div>
         {/* <button type="submit" className="btn btn-primary">Submit</button> */}
-        <SubmitBtn color={color}>Submit</SubmitBtn>
+        {/* <SubmitBtn color={color}>Submit</SubmitBtn> */}
       </form>
     </div>
   );

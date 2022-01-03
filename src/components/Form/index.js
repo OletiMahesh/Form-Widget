@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import './index.scss';
+import './index.css';
 
 const Title = styled.h2`
    color: ${({ theme }) => theme.colors.text};

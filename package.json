@@ -23,8 +23,8 @@
     "build": "webpack",
     "build:widget": "webpack ./src/index.js --output-path=docs/index.js --mode=development",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run docs",
+    "deploy": "gh-pages -d docs",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

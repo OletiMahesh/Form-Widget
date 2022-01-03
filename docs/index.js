@@ -206,7 +206,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -646,17 +646,6 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar reportWebVitals = functio
 /***/ (function(module) {
 
 eval("module.exports = JSON.parse(\"{\\\"data\\\":{\\\"goeasy\\\":{\\\"id\\\":\\\"T_001\\\",\\\"name\\\":\\\"Goeasy\\\",\\\"colors\\\":{\\\"body\\\":\\\"#FFF\\\",\\\"text\\\":\\\"rgb(0, 138, 14)\\\",\\\"button\\\":{\\\"text\\\":\\\"#FFFFFF\\\",\\\"background\\\":\\\"rgb(0, 138, 14)\\\"},\\\"link\\\":{\\\"text\\\":\\\"teal\\\",\\\"opacity\\\":1}},\\\"font\\\":\\\"Tinos\\\"},\\\"efs\\\":{\\\"id\\\":\\\"T_002\\\",\\\"name\\\":\\\"EFS\\\",\\\"colors\\\":{\\\"body\\\":\\\"#fff\\\",\\\"text\\\":\\\"#005da5\\\",\\\"button\\\":{\\\"text\\\":\\\"#ffffff\\\",\\\"background\\\":\\\"#005da5\\\"},\\\"link\\\":{\\\"text\\\":\\\"#0d47a1\\\",\\\"opacity\\\":0.8}},\\\"font\\\":\\\"Ubuntu\\\"}}}\");\n\n//# sourceURL=webpack://form-widget/./src/theme/schema.json?");
-
-/***/ }),
-
-/***/ 0:
-/*!****************************!*\
-  !*** multi ./src/index.js ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__(/*! ./src/index.js */\"./src/index.js\");\n\n\n//# sourceURL=webpack://form-widget/multi_./src/index.js?");
 
 /***/ })
 

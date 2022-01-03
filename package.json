@@ -21,10 +21,10 @@
     "start": "react-scripts start",
     "dev": "webpack serve",
     "build": "webpack",
-    "build:widget": "parcel build src/index.js --no-source-maps -d docs",
+    "build:widget": "webpack ./src/index.js --output-path=docs/index.js --mode=development",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build:widget",
+    "deploy": "gh-pages -d build:widget",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

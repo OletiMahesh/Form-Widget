@@ -2,9 +2,10 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.js',
+    mode: 'development',
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'docs'),
         libraryTarget: 'umd',
         library: 'form-widget'
     },

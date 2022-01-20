@@ -2,6 +2,11 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+    template: path.join(__dirname, "public/index.html"),
+    filename: "index.html"
+});
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -58,7 +63,5 @@ module.exports = {
         },
       ]
   },
-  plugins: [
-    new HtmlWebpackPlugin()
-  ]
+  plugins: [htmlWebpackPlugin],
 }

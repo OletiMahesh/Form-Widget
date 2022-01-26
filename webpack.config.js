@@ -10,7 +10,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'bundles.js',
         path: path.resolve(__dirname, 'docs'),
         library: 'form-widget',
         libraryTarget: 'umd',

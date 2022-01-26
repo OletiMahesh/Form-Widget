@@ -12,8 +12,9 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'docs'),
-        // libraryTarget: 'umd',
-        // library: 'form-widget'
+        library: 'form-widget',
+        libraryTarget: 'umd',
+        umdNamedDefine: true,
     },
     module: {
       rules: [

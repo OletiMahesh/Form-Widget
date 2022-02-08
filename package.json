@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "dev": "webpack serve",
     "build:webpack": "webpack",
-    "build:widget": "webpack ./src/index.js --output-path=docs --mode=production",
+    "build:widget": "webpack ./src/index.js --output-path=docs --mode=development",
     "test": "react-scripts test",
     "predeploy": "npm run build:widget",
     "deploy": "gh-pages -d build:widget",

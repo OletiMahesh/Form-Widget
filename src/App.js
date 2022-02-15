@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 import Form from './components/Form';
 import * as themes from './theme/schema.json';
-import img from './images/easyfinanciere.jpg'
+// import img from './images/easyfinanciere.jpg'
 
 function App(props) {
   console.log(props);
@@ -18,12 +18,12 @@ function App(props) {
   console.log(themes);
   const theme = themes.default.data[themeContent];
   console.log(theme);
-  let source = require(`./images/easyfinanciere.jpg`);
+  // let source = require(`./images/easyfinanciere.jpg`);
   // const imageUrl = new URL(
   //   './images/easyfinanciere.jpg',
   //   import.meta.url
   // );
-  console.log(source.default);
+  // console.log(source.default);
 
   // useEffect(() => {
   // fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -51,7 +51,7 @@ function App(props) {
     <div className="container mt-5">
       <ThemeProvider theme={ theme }>
         <Form />
-        <img src={source.default} className="App-logo" alt="logo" />
+        {/* <img src={source.default} className="App-logo" alt="logo" /> */}
       </ThemeProvider>
     </div>
   );

@@ -4,6 +4,7 @@ import './index.css';
 
 const Title = styled.h2`
    color: ${({ theme }) => theme.colors.text};
+   font-weight: bold;
 `;
 
 const SubmitBtn = styled.button`
@@ -49,6 +50,7 @@ const SignupBtn = styled.button.attrs(props => ({
     // border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 0.25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 `;
@@ -58,13 +60,13 @@ function Form(props) {
   const {color} = props;
   console.log(color);
   // const signup = () => {
-  //   fetch('https://jsonplaceholder.typicode.com/todos/1')
+  //   fetch('http://dummy.restapiexample.com/api/v1/employees')
   //     .then(response => response.json())
   //     .then(json => console.log(json));
   // }
 
   const handleSignup = () => {
-   fetch('http://dummy.restapiexample.com/api/v1/employees')
+   fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
       .then(json => console.log(json));
   }
